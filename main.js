@@ -7,16 +7,6 @@ const divide = document.getElementById("divide");
 const multiply = document.getElementById("multiply");
 const equals = document.getElementById("equals");
 const clear = document.getElementById("clear");
-
-// const num1 = document.getElementById("num1");
-// const num2 = document.getElementById("num2");
-// const num3 = document.getElementById("num3");
-// const num4 = document.getElementById("num4");
-// const num5 = document.getElementById("num5");
-// const num6 = document.getElementById("num6");
-// const num7 = document.getElementById("num7");
-// const num8 = document.getElementById("num8");
-// const num9 = document.getElementById("num9");
 const calculator = document.getElementById("calculator");
 //FUNCTIONS
 
@@ -25,18 +15,17 @@ let array1 = [0];
 let operation = "";
 let array2 = [];
 
+//DISPLAY NUMBER
 function renderDisplay(array) {
   displayBox.innerHTML = array.join("");
-  console.log("i = " + i);
-  console.log(array1 + operation + array2);
+  console.log(i);
 }
 
 renderDisplay(array1);
 
-const ners = document.getElementById("houseButtons");
+//NUMBER BUTTON ENTRY
 calculator.addEventListener("click", (event) => {
   const id = event.target.id;
-
   if (i === 0) {
     if (
       id === "1" ||
@@ -104,6 +93,7 @@ calculator.addEventListener("click", (event) => {
   }
 });
 
+//OPERATIONS BUTTONS
 clear.addEventListener("click", () => {
   array1 = [0];
   array2 = [0];
@@ -116,8 +106,12 @@ backspace.addEventListener("click", () => {
   if (i === 1) {
     const index = array1.length - 1;
     array1.splice(index);
+    if (array1.length === 0) {
+      array1[0] = 0;
+      i = 0;
+    }
     renderDisplay(array1);
-  } else if (i === 3) {
+  } else if (i > 2) {
     const index = array2.length - 1;
     array2.splice(index);
     renderDisplay(array2);
@@ -128,8 +122,8 @@ plus.addEventListener("click", () => {
   if (i === 1) {
     operation = "+";
     i++;
-    console.log(operation);
-    console.log(i);
+  } else if (i > 2) {
+    result2("+");
   }
 });
 
@@ -137,7 +131,8 @@ minus.addEventListener("click", () => {
   if (i === 1) {
     operation = "-";
     i++;
-    console.log(operation);
+  } else if (i > 2) {
+    result2("-");
   }
 });
 
@@ -145,19 +140,48 @@ divide.addEventListener("click", () => {
   if (i === 1) {
     operation = "/";
     i++;
-    console.log(operation);
+  } else if (i > 2) {
+    result2("/");
   }
 });
 
-divide.addEventListener("click", () => {
+multiply.addEventListener("click", () => {
   if (i === 1) {
     operation = "*";
     i++;
-    console.log(operation);
+  } else if (i > 2) {
+    result2("*");
   }
 });
 
 equals.addEventListener("click", () => {
-  const result = array1.join("") + operation + array2.join("");
-  displayBox.innerHTML = result;
+  result();
 });
+
+//CALCULATE RESULT
+function result() {
+  if (i > 2) {
+    const result = eval(array1.join("") + operation + array2.join(""));
+    displayBox.innerHTML = result;
+    array1 = [];
+    array1 = Array.from(String(result), Number);
+    console.log(array1);
+    array2 = [];
+    i = 1;
+    console.log(i);
+  }
+}
+
+//CALCULATE WITHOUT PRESSING EQUAL BUTTON
+function result2(oldOperation) {
+  if (i > 2) {
+    const result = eval(array1.join("") + operation + array2.join(""));
+    displayBox.innerHTML = result;
+    operation = oldOperation;
+    array1 = [];
+    array1 = Array.from(String(result), Number);
+    console.log(array1);
+    array2 = [0];
+    i = 2;
+  }
+}
