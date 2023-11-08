@@ -1,83 +1,107 @@
-.wrapper {width: 400px;}
-
-.container { 
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-start;
-    justify-content: center;
-} 
-
-.row { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-} 
-
-.row1 { 
-  display: grid; 
-  grid-template-columns: 2fr 1fr 1fr; 
+.wrapper {
+  width: 400px;
 }
 
-.row2 { 
-  display: grid; 
-  grid-template-columns: 3fr 1fr; 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.numeral { 
-    color: black;
-    font-size: xxx-large;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #d8d9db;  
-    text-align: center;
-    width: 100px;
-    height: 100px;
-  } 
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
-.numeral:hover{background-color: #ebebeb;}
-.numeral:active{background-color: #bbbcbe;}
+.row1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
 
-.numeral_double { 
+.row2 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.numeral {
   color: black;
   font-size: xxx-large;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #d8d9db;  
-  text-align: center;
-  width: 200px;
-  height: 100px;
-} 
-
-.numeral_double:hover{background-color: #ebebeb;}
-.numeral_double:active{background-color: #bbbcbe;}
-
-.numeral_triple { 
-  color: black;
-  font-size: xxx-large;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #d8d9db;  
-  text-align: center;
-  width: 300px;
-  height: 100px;
-} 
-
-.numeral_triple:hover{background-color: #ebebeb;}
-.numeral_triple:active{background-color: #bbbcbe;}
-
-.operation{color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: xxx-large;
-  background-color: #df974c;  
+  background-color: #d8d9db;
   text-align: center;
   width: 100px;
   height: 100px;
 }
-.operation:hover{background-color: #dfb07e;}
-.operation:active{background-color: #dd8d37;}
 
-.result {background-color: black;
+.numeral:hover {
+  background-color: #ebebeb;
+}
+.numeral:active {
+  background-color: #bbbcbe;
+}
+
+.numeral_double {
+  color: black;
+  font-size: xxx-large;
   font-family: Arial, Helvetica, sans-serif;
-  font-size:xx-large;
+  background-color: #d8d9db;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+}
+
+.numeral_double:hover {
+  background-color: #ebebeb;
+}
+.numeral_double:active {
+  background-color: #bbbcbe;
+}
+
+.numeral_triple {
+  color: black;
+  font-size: xxx-large;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #d8d9db;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+}
+
+.numeral_triple:hover {
+  background-color: #ebebeb;
+}
+.numeral_triple:active {
+  background-color: #bbbcbe;
+}
+
+.operation {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xxx-large;
+  background-color: #df974c;
+  text-align: center;
+  width: 100px;
+  height: 100px;
+}
+.operation:hover {
+  background-color: #dfb07e;
+}
+.operation:active {
+  background-color: #dd8d37;
+}
+
+.result {
+  background-color: black;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: xx-large;
   line-height: 80px;
   text-align: right;
   color: white;
   width: 400px;
-  height: 75px;
+  height: 85px;
+  overflow: auto;
 }
