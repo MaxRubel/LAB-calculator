@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <title>Calculator</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div id="calculator" class="container">
+      <div id="display" class="result"></div>
+      <div class="row1">
+        <button id="clear" class="numeral_double">C</button>
+        <button id="backspace" class="numeral">&#x2190;</button>
+        <button id="divide" class="operation">&#247;</button>
+      </div>
+      <div class="row">
+        <button id="7" class="numeral">7</button>
+        <button id="8" class="numeral">8</button>
+        <button id="9" class="numeral">9</button>
+        <button id="multiply" class="operation">&#215;</button>
+      </div>
+      <div class="row">
+        <button id="4" class="numeral">4</button>
+        <button id="5" class="numeral">5</button>
+        <button id="6" class="numeral">6</button>
+        <button id="minus" class="operation">&#8722;</button>
+      </div>
 
-  
-  
-<div class="container"> 
+      <div class="row">
+        <button id="1" class="numeral">1</button>
+        <button id="2" class="numeral">2</button>
+        <button id="3" class="numeral">3</button>
+        <button id="plus" class="operation">&#43;</button>
+      </div>
+      <div class="row2">
+        <button id="0" class="numeral_triple">0</button>
+        <button id="equals" class="operation">&#61;</button>
+      </div>
+    </div>
 
-  <div class="result">0</div>
-  <div class="row1"> 
-      <button class="numeral_double">C</button> 
-      <button class="numeral">&#x2190;</button> 
-      <button class="operation">&#247;</button> 
-  </div> 
-  <div class="row"> 
-    <button class="numeral">7</button>
-    <button class="numeral">8</button> 
-    <button class="numeral">9</button> 
-    <button class="operation">&#215;</button> 
-  </div> 
-
-  <div class="row"> 
-      <button class="numeral">4</button> 
-      <button class="numeral">5</button> 
-      <button class="numeral">6</button>
-      <button class="operation">&#8722;</button>
-  </div>
-        
-  <div class="row"> 
-      <button class="numeral">1</button> 
-      <button class="numeral">2</button> 
-      <button class="numeral">3</button>
-      <button class="operation">&#43;</button> 
-  </div>
-  <div class="row2"> 
-    <button class="numeral_triple">0</button> 
-    <button class="operation">&#61;</button> 
-  </div>  
-</div> 
-  
-</head>
-<body>
-  
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
